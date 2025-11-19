@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+     <link rel="stylesheet" href="css/style.css">
+    <!-- TAILWIND CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
+</head>
+<body>
+      <!-- SIDEBAR -->
+    <div id="sidebar" class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg p-6 transform -translate-x-full transition-all duration-300 z-50">
+    <h2 class="text-2xl font-bold mb-8">Agreon<span class="text-green-600">Pay</span></h2>
+    <ul class="space-y-6 text-lg">
+        <li><a href="index.html" class="hover:text-green-600">Home</a></li>
+        <li><a href="#" class="text-green-600">Features</a></li>
+        <li><a href="pricing.html" class="hover:text-green-600">Pricing</a></li>
+        <li><a href="contact.html" class="hover:text-green-600">Contact</a></li>
+    </ul>
+    </div>
+
+    <!-- BACKDROP -->
+    <div id="backdrop" class="fixed inset-0 bg-black/40 hidden z-40"></div>
+<!-- NAVBAR -->
+<nav class="w-full bg-white fixed top-0 left-0 z-40 shadow-sm px-6 py-4 flex justify-between items-center">
+  <a href="#" class="flex items-center">
+    <img src="img/mainlogo.png" alt="AgreonPay Logo" class="h-16 md:h-10 sm:h-10"
+>
+  </a>
+
+  <!-- Desktop Menu -->
+  <ul class="hidden md:flex gap-8 text-gray-700 font-medium">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="#" class="text-green-600">Features</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="#contact" class="text-green-600">Contact</a></li>
+  </ul>
+
+  <!-- MOBILE BUTTONS -->
+  <div class="md:hidden">
+      <button id="menuBtn" class="text-3xl">☰</button>
+      <button id="closeBtn" class="text-3xl hidden">✕</button>
+  </div>
+</nav>
+
+
+
+    
+     <!-- CONTACT SECTION -->
+<section id="contact" class="py-24 bg-gray-50 pt-32">
+  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12">
+
+    <!-- LEFT: CONTACT INFORMATION -->
+    <div class="space-y-6 animate-fadeUp">
+      <h2 class="text-4xl font-bold text-gray-900">Contact Us</h2>
+      <p class="text-gray-600 text-lg">
+        Have questions, partnership inquiries, or need support? We’re here to assist you.
+      </p>
+
+      <!-- Location -->
+      <div class="flex items-start gap-4">
+        <i class="ri-map-pin-2-line text-3xl text-green-600"></i>
+        <div>
+          <h4 class="font-semibold text-gray-900">Our Location</h4>
+          <p class="text-gray-600">Nigeria</p>
+        </div>
+      </div>
+
+      <!-- Office -->
+      <div class="flex items-start gap-4">
+        <i class="ri-building-4-line text-3xl text-green-600"></i>
+        <div>
+          <h4 class="font-semibold text-gray-900">Lagos Office</h4>
+          <p class="text-gray-600">Victoria Island, Lagos</p>
+        </div>
+      </div>
+
+      <!-- Address -->
+      <div class="flex items-start gap-4">
+        <i class="ri-map-pin-line text-3xl text-green-600"></i>
+        <div>
+          <h4 class="font-semibold text-gray-900">Address</h4>
+          <p class="text-gray-600">123 AgreonPay Hub, Lagos, Nigeria</p>
+        </div>
+      </div>
+
+      <!-- Phone -->
+      <div class="flex items-start gap-4">
+        <i class="ri-phone-line text-3xl text-green-600"></i>
+        <div>
+          <h4 class="font-semibold text-gray-900">Phone</h4>
+          <p class="text-gray-600">+234 800 000 0000</p>
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="flex items-start gap-4">
+        <i class="ri-mail-line text-3xl text-green-600"></i>
+        <div>
+          <h4 class="font-semibold text-gray-900">Email</h4>
+          <p class="text-gray-600">support@agreonpay.com</p>
+        </div>
+      </div>
+
+      <!-- Working Hours -->
+      <div class="flex items-start gap-4">
+        <i class="ri-time-line text-3xl text-green-600"></i>
+        <div>
+          <h4 class="font-semibold text-gray-900">Working Hours</h4>
+          <p class="text-gray-600">Mon – Fri: 9:00AM – 5:00PM</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT: CONTACT FORM -->
+    <div class="bg-white shadow-lg p-8 rounded-xl space-y-6 animate-fadeUp delay-200">
+
+      <h3 class="text-2xl font-semibold text-gray-900">Send Us a Message</h3>
+
+      <form action="#" class="space-y-5">
+
+        <!-- Name -->
+        <div class="flex items-center gap-3 border border-gray-300 rounded-lg px-4 py-3 focus-within:border-green-600">
+          <i class="ri-user-line text-xl text-gray-500"></i>
+          <input type="text" placeholder="Your Name" class="w-full outline-none text-gray-700">
+        </div>
+
+        <!-- Email -->
+        <div class="flex items-center gap-3 border border-gray-300 rounded-lg px-4 py-3 focus-within:border-green-600">
+          <i class="ri-mail-line text-xl text-gray-500"></i>
+          <input type="email" placeholder="Your Email" class="w-full outline-none text-gray-700">
+        </div>
+
+        <!-- Phone -->
+        <div class="flex items-center gap-3 border border-gray-300 rounded-lg px-4 py-3 focus-within:border-green-600">
+          <i class="ri-phone-line text-xl text-gray-500"></i>
+          <input type="text" placeholder="Your Phone Number" class="w-full outline-none text-gray-700">
+        </div>
+
+        <!-- Message -->
+        <div class="flex items-start gap-3 border border-gray-300 rounded-lg px-4 py-3 focus-within:border-green-600">
+          <i class="ri-chat-3-line text-2xl text-gray-500 mt-1"></i>
+          <textarea placeholder="Your Message" class="w-full h-32 outline-none text-gray-700 resize-none"></textarea>
+        </div>
+
+        <!-- Button -->
+        <button class="w-full bg-green-600 text-white font-semibold py-3 rounded-lg hover:bg-green-700 transition">
+          Send Message
+        </button>
+      </form>
+
+    </div>
+
+  </div>
+</section>
+
+ <!-- Footer -->
+    <footer class="bg-black text-white py-16">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+
+        <!-- COLUMN 1: Logo + Description -->
+        <div class="space-y-4">
+        <img src="img/agreon.jpg" alt="AgreonPay Logo" class="w-32">
+        <p class="text-gray-400 text-sm">
+            AgreonPay provides a unified agricultural payment system designed for faster, safer, and transparent transactions.
+        </p>
+        <!-- Social Icons -->
+        <div class="flex gap-4 mt-4">
+            <a href="#" class="hover:text-green-500 transition"><i class="ri-facebook-fill text-2xl"></i></a>
+            <a href="#" class="hover:text-green-500 transition"><i class="ri-twitter-fill text-2xl"></i></a>
+            <a href="#" class="hover:text-green-500 transition"><i class="ri-linkedin-fill text-2xl"></i></a>
+            <a href="#" class="hover:text-green-500 transition"><i class="ri-tiktok-fill text-2xl"></i></a>
+        </div>
+        </div>
+
+        <!-- COLUMN 2: Company Links -->
+        <div class="space-y-2">
+        <h4 class="font-semibold text-white mb-4">Company</h4>
+        <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="#" class="hover:text-green-500 transition">About Us</a></li>
+            <li><a href="#" class="hover:text-green-500 transition">Careers</a></li>
+            <li><a href="#" class="hover:text-green-500 transition">Blog</a></li>
+            <li><a href="#" class="hover:text-green-500 transition">Contact</a></li>
+        </ul>
+        </div>
+
+        <!-- COLUMN 3: Products / Services -->
+        <div class="space-y-2">
+        <h4 class="font-semibold text-white mb-4">Services</h4>
+        <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="#" class="hover:text-green-500 transition">Instant Payments</a></li>
+            <li><a href="#" class="hover:text-green-500 transition">Unified Wallet</a></li>
+            <li><a href="#" class="hover:text-green-500 transition">Transaction Tracking</a></li>
+            <li><a href="#" class="hover:text-green-500 transition">Integration API</a></li>
+        </ul>
+        </div>
+
+        <!-- COLUMN 4: Support Links -->
+        <div class="space-y-2">
+        <h4 class="font-semibold text-white mb-4">Support</h4>
+        <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="#" class="hover:text-green-500 transition">Help Center</a></li>
+            <li><a href="#" class="hover:text-green-500 transition">FAQs</a></li>
+            <li><a href="#" class="hover:text-green-500 transition">Terms & Conditions</a></li>
+            <li><a href="#" class="hover:text-green-500 transition">Privacy Policy</a></li>
+        </ul>
+        </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="mt-12 border-t border-gray-800 pt-6 text-center text-gray-500 text-sm">
+        &copy; 2025 AgreonPay. All rights reserved.
+    </div>
+    </footer>
+
+</body>
+</html>
