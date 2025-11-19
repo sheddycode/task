@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Features</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- TAILWIND CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://cdn.jsdelivr.net/npm/remixicon@4.7.0/fonts/remixicon.css"
+        rel="stylesheet"
+    />
+</head>
+<body>
+    <!-- SIDEBAR -->
+    <div id="sidebar" class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg p-6 transform -translate-x-full transition-all duration-300 z-50">
+    <h2 class="text-2xl font-bold mb-8">Agreon<span class="text-green-600">Pay</span></h2>
+    <ul class="space-y-6 text-lg">
+        <li><a href="index.html" class="hover:text-green-600">Home</a></li>
+        <li><a href="#" class="text-green-600">Features</a></li>
+        <li><a href="pricing.html" class="hover:text-green-600">Pricing</a></li>
+        <li><a href="contact.html" class="hover:text-green-600">Contact</a></li>
+    </ul>
+    </div>
+
+    <!-- BACKDROP -->
+    <div id="backdrop" class="fixed inset-0 bg-black/40 hidden z-40"></div>
+
+    <!-- NAVBAR -->
+    <nav class="w-full bg-white fixed top-0 left-0 z-40 shadow-sm px-6 py-4 flex justify-between items-center">
+    <a href="#" class="flex items-center">
+    <img src="img/mainlogo.png" alt="AgreonPay Logo" class="h-16 md:h-20 w-auto">
+    </a>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex gap-8 text-gray-700 font-medium">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#" class="text-green-600">Features</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+
+    <!-- MOBILE BUTTONS -->
+    <div class="md:hidden">
+        <!-- MENU ICON -->
+        <button id="menuBtn" class="text-3xl">
+        ☰
+        </button>
+
+        <!-- CLOSE ICON -->
+        <button id="closeBtn" class="text-3xl hidden">
+        ✕
+        </button>
+    </div>
+    </nav>
+
+    <!-- Hero section -->
+    <section class="h-screen bg-cover bg-center flex items-center justify-center  relative"
+    style="background-image: url('img/featureshero.jpg')">
+    
+    <div class="absolute inset-0 bg-black opacity-50"></div>
+
+    <div class="relative z-10 text-white max-w-2xl px-4 text-left md:text-left">
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4">Our Farm Product Features</h1>
+        <p class="text-lg md:text-xl mb-6">Quality farm products delivered fresh from the source. We prioritize sustainability, freshness, and natural farming techniques to give you the best harvest experience.</p>
+    
+        <a href="#" class="bg-white text-green-600 border border-green-600 px-8 py-3 rounded-md text-lg font-semibold 
+        hover:bg-green-600 hover:text-white transition">
+            Get Started
+        </a>
+
+    </div>
+    </section>
+    
+
+    <!-- CARDS SECTION -->
+    <!-- FEATURES SECTION -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-12">
+            Powerful Feautures Built for <span class="text-green-600">Agricultural</span> Purposes
+            </h2>
+
+            <div class="grid md:grid-cols-3 gap-8">
+
+            <!-- CARD TEMPLATE  -->
+            <!-- CARD 1 -->
+            <div class="card  translate-y-10 transition-all duration-700 bg-white shadow-lg rounded-xl p-8 border-t-4 border-green-600">
+                <div class="w-16 h-16 bg-green-600 text-white flex items-center justify-center rounded-lg text-4xl mx-auto mb-4">
+            <i class="ri-wallet-line"></i>
+
+                </div>
+                <h3 class="text-xl font-semibold mb-3 text-green-600">Unified Agro Wallet</h3>
+                <p class="text-black-300">
+                One wallet for storing, sending, receiving, and tracking all agricultural payments, eliminating scattered transactions.
+                </p>
+            </div>
+
+            <!-- CARD 2 -->
+            <div class="card  translate-y-10 transition-all duration-700 bg-white shadow-lg rounded-xl p-8 border-t-4 border-green-600">
+                <div class="w-16 h-16 bg-green-600 text-white flex items-center justify-center rounded-lg text-4xl mx-auto mb-4">
+            <i class="ri-wallet-line"></i>
+
+                </div>
+                <h3 class="text-xl font-semibold mb-3 text-green-600">Instant Settlements</h3>
+                <p class="text-black-300">
+                No more delayed payments. Funds reflect instantly when farmers deliver goods or when buyers make purchases.
+                </p>
+            </div>
+            
+            <!-- CARD 3 -->
+            <div class="card  translate-y-10 transition-all duration-700 bg-white shadow-lg rounded-xl p-8 border-t-4 border-green-600">
+                <div class="w-16 h-16 bg-green-600 text-white flex items-center justify-center rounded-lg text-4xl mx-auto mb-4">
+            <i class="ri-wallet-line"></i>
+
+                </div>
+                <h3 class="text-xl font-semibold mb-3 text-green-600">Secure Token-Based System</h3>
+                <p class="text-black-300">
+                AgreonPay uses a token-driven transaction model that ensures traceability and prevents fraud between buyers and sellers.
+                </p>
+            </div>
+
+            <!-- CARD 4 -->
+            <div class="card  translate-y-10 transition-all duration-700 bg-white shadow-lg rounded-xl p-8 border-t-4 border-green-600">
+                <div class="w-16 h-16 bg-green-600 text-white flex items-center justify-center rounded-lg text-4xl mx-auto mb-4">
+            <i class="ri-wallet-line"></i>
+
+                </div>
+                <h3 class="text-xl font-semibold mb-3 text-green-600">Real-Time Tracking</h3>
+                <p class="text-black-300">
+                Track every transaction, from farm gate payments to marketplace settlements in a clean, unified dashboard.
+                </p>
+            </div>
+
+            <!-- CARD 5 -->
+            <div class="card  translate-y-10 transition-all duration-700 bg-white shadow-lg rounded-xl p-8 border-t-4 border-green-600">
+                <div class="w-16 h-16 bg-green-600 text-white flex items-center justify-center rounded-lg text-4xl mx-auto mb-4">
+            <i class="ri-wallet-line"></i>
+
+                </div>
+                <h3 class="text-xl font-semibold mb-3 text-green-600">Designed for Rural Accessibility</h3>
+                <p class="text-black-300">
+                Works smoothly in low-connectivity areas and supports farmers in remote regions with simple, friendly UI.
+                </p>
+            </div>
+
+            <!-- CARD 6 -->
+            <div class="card  translate-y-10 transition-all duration-700 bg-white shadow-lg rounded-xl p-8 border-t-4 border-green-600">
+                <div class="w-16 h-16 bg-green-600 text-white flex items-center justify-center rounded-lg text-4xl mx-auto mb-4">
+            <i class="ri-wallet-line"></i>
+
+                </div>
+                <h3 class="text-xl font-semibold mb-3 text-green-600">Buyer-Seller Trust System</h3>
+                <p class="text-black-300">
+                Smart escrow-like process ensures both parties are protected — reducing conflict, failed payments, and mistrust.
+                </p>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- BENEFIT SECTION -->
+     <section class="py-24 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6">
+
+        <!-- TITLE -->
+        <h2 class="text-4xl font-bold text-center text-gray-900 mb-10 animate-fadeUp">
+        Why These <span class="text-green-600">Features</span> Matters!
+        </h2>
+        <p class="text-lg md:text-xl mb-6 text-center">
+            AgreonPay is more than just a payment tool. It is a financial backbone designed for agriculture. Every feature helps solve real problems farmers and agro-businesses face daily.
+        </p>
+        <div class="grid md:grid-cols-2 gap-12">
+            <!-- Benefit 1 -->
+            <div class="flex gap-4">
+                <div class="text-4xl text-green-500">
+                    <i class="ri-flower-line"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-green-600 mb-2">Stable, Reliable Income Flow</h3>
+                    <p class="text-gray-600">
+                        Farmers no longer need to wait days or weeks after delivering products. 
+                        Instant settlements mean predictable cash flow for feeding families, 
+                        buying inputs, and scaling farms.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Benefit 1 -->
+            <div class="flex gap-4">
+                <div class="text-4xl text-blue-700">
+                    <i class="ri-search-line"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-green-600 mb-2">Clear Accountability & Reduced Fraud</h3>
+                    <p class="text-gray-600">
+                        With unified tracking and token-based verification, both buyers and sellers gain transparency. No more disputes about who paid or who received.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Benefit 3 -->
+            <div class="flex gap-4">
+                <div class="text-4xl text-gray-600">
+                    <i class="ri-truck-fill"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-green-600 mb-2">Perfect For Rural Communities</h3>
+                    <p class="text-gray-600">
+                        AgreonPay works smoothly even where internet is weak. Farmers in remote areas can send and receive payments without stress.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Benefit 4 -->
+            <div class="flex gap-4">
+                <div class="text-4xl text-yellow-600">
+                    <i class="ri-service-fill"></i>
+                </div>
+                <div>
+                    <h3 class="text-xl font-semibold text-green-600 mb-2">Stronger Trust Between Buyers & Farmers</h3>
+                    <p class="text-gray-600">
+                        Escrow-like protection reduces fear, ensures fairness, and builds credibility the agricultural value chain.
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+     </section>
+
+     <!-- COMPARE SECTION -->
+     <section class="py-24 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-6 animate-fadeUp delay-100">
+
+        <!-- TITLE -->
+        <h2 class="text-4xl font-bold text-center text-gray-900 mb-10 animate-fadeUp">
+        Before VS After <span class="text-green-600">AgreonPay</span>
+        </h2>
+        <p class="text-gray-700 mb-6 text-center">
+            A clear view of how AgreonPay transforms the agricultural payment workflow.
+        </p>
+        <div class="grid md:grid-cols-2 gap-10">
+            <!-- BEFORE -->
+             <div class="bg-red-50 p-8 rounded-2xl border border-red-200 shadow">
+                <h3 class="text-2xl font-bold text-red-700 mb-6">🌑 Before AgreonPay</h3>
+                <!-- BULLETS -->
+                <ul class="space-y-4 text-gray-800">
+                    <li class="flex items-start gap-3">
+                    <span class="text-green-600 text-xl font-bold">•</span>
+                    <p><strong>Delayed or failed payments</strong></p>
+                    </li>
+                    
+                    <li class="flex items-start gap-3">
+                    <span class="text-green-600 text-xl font-bold">•</span>
+                    <p><strong>Scattered payment channels</strong></p>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                    <span class="text-green-600 text-xl font-bold">•</span>
+                    <p><strong>No proof or transaction trail</strong></p>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                    <span class="text-green-600 text-xl font-bold">•</span>
+                    <p><strong>Trust issues between buyers and farmers</strong></p>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                    <span class="text-green-600 text-xl font-bold">•</span>
+                    <p><strong>Lack of digital access for rural users</strong></p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- AFTER -->
+             <div class="bg-green-50 p-8 rounded-2xl border border-green-200 shadow">
+                <h3 class="text-2xl font-bold text-gren-700 mb-6">🌞 After AgreonPay</h3>
+                <!-- BULLETS -->
+                <ul class="space-y-4 text-gray-800">
+                    <li class="flex items-start gap-3">
+                    <span class="text-green-600 text-xl font-bold">•</span>
+                    <p><strong>Instant settlements</strong></p>
+                    </li>
+                    
+                    <li class="flex items-start gap-3">
+                    <span class="text-green-600 text-xl font-bold">•</span>
+                    <p><strong>One unified agro wallet</strong></p>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                    <span class="text-green-600 text-xl font-bold">•</span>
+                    <p><strong>Full tracking & transparency</strong></p>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                    <span class="text-green-600 text-xl font-bold">•</span>
+                    <p><strong>Trust-enforced token system</strong></p>
+                    </li>
+
+                    <li class="flex items-start gap-3">
+                    <span class="text-green-600 text-xl font-bold">•</span>
+                    <p><strong>Easy rural access</strong></p>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+        </div>
+     </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="bg-black text-white py-16">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+
+        <!-- COLUMN 1: Logo + Description -->
+        <div class="space-y-4">
+        <img src="img/agreon.jpg" alt="AgreonPay Logo" class="w-32">
+        <p class="text-gray-400 text-sm">
+            AgreonPay provides a unified agricultural payment system designed for faster, safer, and transparent transactions.
+        </p>
+        <!-- Social Icons -->
+        <div class="flex gap-4 mt-4">
+            <a href="#" class="hover:text-green-500 transition"><i class="ri-facebook-fill text-2xl"></i></a>
+            <a href="#" class="hover:text-green-500 transition"><i class="ri-twitter-fill text-2xl"></i></a>
+            <a href="#" class="hover:text-green-500 transition"><i class="ri-linkedin-fill text-2xl"></i></a>
+            <a href="#" class="hover:text-green-500 transition"><i class="ri-tiktok-fill text-2xl"></i></a>
+        </div>
+        </div>
+
+        <!-- COLUMN 2: Company Links -->
+        <div class="space-y-2">
+        <h4 class="font-semibold text-white mb-4">Company</h4>
+        <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="#" class="hover:text-green-500 transition">About Us</a></li>
+            <li><a href="#" class="hover:text-green-500 transition">Careers</a></li>
+            <li><a href="#" class="hover:text-green-500 transition">Blog</a></li>
+            <li><a href="#" class="hover:text-green-500 transition">Contact</a></li>
+        </ul>
+        </div>
+
+        <!-- COLUMN 3: Products / Services -->
+        <div class="space-y-2">
+        <h4 class="font-semibold text-white mb-4">Services</h4>
+        <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="#" class="hover:text-green-500 transition">Instant Payments</a></li>
+            <li><a href="#" class="hover:text-green-500 transition">Unified Wallet</a></li>
+            <li><a href="#" class="hover:text-green-500 transition">Transaction Tracking</a></li>
+            <li><a href="#" class="hover:text-green-500 transition">Integration API</a></li>
+        </ul>
+        </div>
+
+        <!-- COLUMN 4: Support Links -->
+        <div class="space-y-2">
+        <h4 class="font-semibold text-white mb-4">Support</h4>
+        <ul class="space-y-2 text-gray-400 text-sm">
+            <li><a href="#" class="hover:text-green-500 transition">Help Center</a></li>
+            <li><a href="#" class="hover:text-green-500 transition">FAQs</a></li>
+            <li><a href="#" class="hover:text-green-500 transition">Terms & Conditions</a></li>
+            <li><a href="#" class="hover:text-green-500 transition">Privacy Policy</a></li>
+        </ul>
+        </div>
+
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="mt-12 border-t border-gray-800 pt-6 text-center text-gray-500 text-sm">
+        &copy; 2025 AgreonPay. All rights reserved.
+    </div>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
