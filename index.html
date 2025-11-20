@@ -15,52 +15,104 @@
 </head>
 <body class="overflow-x-hidden">
 
-<!-- SIDEBAR -->
-<div id="sidebar" class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg p-6 transform -translate-x-full transition-all duration-300 z-50">
-<a href="#" class="flex items-center">
-  <img src="img/agreonlogo.png" alt="AgreonPay Logo" class="md:h-8 h-4 w-auto mb-4">
-</a>
-  <ul class="space-y-6 text-lg">
-    <li><a href="#" class="text-green-600">Home</a></li>
-    <li><a href="features.html" class="hover:text-green-600">Features</a></li>
-    <li><a href="pricing.html" class="hover:text-green-600">Pricing</a></li>
-    <li><a href="contact.html" class="hover:text-green-600">Contact</a></li>
-  </ul>
-</div>
 
-<!-- BACKDROP -->
-<div id="backdrop" class="fixed inset-0 bg-black/40 hidden z-40"></div>
+  <!-- SIDEBAR -->
+  <div id="sidebar" class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg p-6 transform -translate-x-full transition-all duration-300 z-50 overflow-y-auto">
+    <a href="#" class="flex items-center mb-6">
+      <img src="img/agreonlogo.png" alt="AgreonPay Logo" class="md:h-8 h-6 w-auto">
+    </a>
 
-<!-- NAVBAR -->
-<nav class="w-full bg-white fixed top-0 left-0 z-40 shadow-sm px-6 py-4 flex justify-between items-center">
+    <ul class="space-y-4 text-lg">
+      <li><a href="#" class="text-green-600">Home</a></li>
 
-<a href="#" class="flex items-center">
-  <img src="img/agreonlogo.png" alt="AgreonPay Logo" class="md:h-8 h-4 w-auto">
-</a>
+      <!-- Features Dropdown -->
+      <li>
+        <div class="flex justify-between items-center w-full">
+          <a href="#" class="hover:text-green-600">Features</a>
+          <i class="ri-arrow-down-s-line cursor-pointer sidebar-dropdown-icon"></i>
+        </div>
+        <ul class="ml-4 mt-2 hidden space-y-2 text-gray-700 sidebar-dropdown-menu">
+          <li><a href="#">Feature 1</a></li>
+          <li><a href="#">Feature 2</a></li>
+          <li><a href="#">Feature 3</a></li>
+        </ul>
+      </li>
 
+      <!-- Pricing Dropdown -->
+      <li>
+        <div class="flex justify-between items-center w-full">
+          <a href="#" class="hover:text-green-600">Pricing</a>
+          <i class="ri-arrow-down-s-line cursor-pointer sidebar-dropdown-icon"></i>
+        </div>
+        <ul class="ml-4 mt-2 hidden space-y-2 text-gray-700 sidebar-dropdown-menu">
+          <li><a href="#">Basic</a></li>
+          <li><a href="#">Standard</a></li>
+          <li><a href="#">Premium</a></li>
+        </ul>
+      </li>
 
+      <li><a href="contact.html" class="hover:text-green-600">Contact</a></li>
+    </ul>
 
-  <!-- Desktop Menu -->
-  <ul class="hidden md:flex gap-8 text-gray-700 text-lg font-medium">
-    <li><a href="#" class="text-green-600">Home</a></li>
-    <li><a href="features.html">Features</a></li>
-    <li><a href="pricing.html">Pricing</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-
-  <!-- MOBILE BUTTONS -->
-  <div class="md:hidden">
-    <!-- MENU ICON -->
-    <button id="menuBtn" class="text-3xl">
-      ☰
-    </button>
-
-    <!-- CLOSE ICON -->
-    <button id="closeBtn" class="text-3xl hidden">
-      ✕
-    </button>
+    <!-- App Buttons -->
+    <div class="mt-8 flex gap-4">
+      <a href="#">
+        <img src="./img/applstore.png" class="h-8 w-auto" alt="Download on App Store">
+      </a>
+      <a href="#">
+        <img src="./img/googplay.png" class="h-8 w-auto" alt="Get it on Google Play">
+      </a>
+    </div>
   </div>
-</nav>
+
+  <!-- BACKDROP -->
+  <div id="backdrop" class="fixed inset-0 bg-black/40 hidden z-40"></div>
+
+  <!-- NAVBAR -->
+  <nav class="w-full bg-white fixed top-0 left-0 z-40 shadow-sm px-6 py-4 flex justify-between items-center">
+    <a href="#" class="flex items-center">
+      <img src="img/agreonlogo.png" alt="AgreonPay Logo" class="md:h-8 h-6 w-auto">
+    </a>
+
+    <!-- Desktop Menu -->
+    <ul class="hidden md:flex gap-8 text-gray-700 text-lg font-medium mr-8">
+      <li><a href="#" class="text-green-600">Home</a></li>
+
+      <!-- Features Dropdown -->
+      <li class="relative">
+        <a href="#" class="hover:text-green-600 flex items-center gap-1">
+          Features
+          <i class="ri-arrow-down-s-line ml-1 cursor-pointer" id="featuresDropdownIcon"></i>
+        </a>
+        <ul class="absolute left-0 mt-2 bg-white shadow-lg rounded-md p-4 hidden space-y-2 text-gray-700 min-w-[150px]" id="featuresDropdownMenu">
+          <li><a href="features.html" class="hover:text-green-600">Feature 1</a></li>
+          <li><a href="features.html" class="hover:text-green-600">Feature 2</a></li>
+          <li><a href="features.html" class="hover:text-green-600">Feature 3</a></li>
+        </ul>
+      </li>
+
+      <!-- Pricing Dropdown -->
+      <li class="relative">
+        <a href="#" class="hover:text-green-600 flex items-center gap-1">
+          Pricing
+          <i class="ri-arrow-down-s-line ml-1 cursor-pointer" id="pricingDropdownIcon"></i>
+        </a>
+        <ul class="absolute left-0 mt-2 bg-white shadow-lg rounded-md p-4 hidden space-y-2 text-gray-700 min-w-[150px]" id="pricingDropdownMenu">
+          <li><a href="pricing.html" class="hover:text-green-600">Basic</a></li>
+          <li><a href="pricing.html" class="hover:text-green-600">Standard</a></li>
+          <li><a href="pricing.html" class="hover:text-green-600">Premium</a></li>
+        </ul>
+      </li>
+
+      <li><a href="contact.html" class="hover:text-green-600">Contact</a></li>
+    </ul>
+
+    <!-- MOBILE BUTTONS -->
+    <div class="md:hidden flex items-center gap-2">
+      <button id="menuBtn" class="text-3xl">☰</button>
+      <button id="closeBtn" class="text-3xl hidden">✕</button>
+    </div>
+  </nav>
 
 <!-- HERO -->
 <section class="h-screen bg-cover bg-center flex items-center justify-center  relative"
@@ -291,34 +343,44 @@
       </p>
 
       <!-- BULLETS -->
-      <ul class="space-y-4 text-gray-800">
+  <ul class="space-y-4 text-gray-800">
 
-        <li class="flex items-start gap-3">
-          <span class="text-green-600 text-xl font-bold">•</span>
-          <p><strong>Instant Payments:</strong> Faster settlements after product delivery.</p>
-        </li>
+  <li class="flex items-start gap-3">
+    <span class="bg-green-100 text-green-600 p-2 rounded-xl">
+      <i class="ri-flashlight-fill text-xl"></i>
+    </span>
+    <p><strong>Instant Payments:</strong> Faster settlements after product delivery.</p>
+  </li>
 
-        <li class="flex items-start gap-3">
-          <span class="text-green-600 text-xl font-bold">•</span>
-          <p><strong>Unified Wallet:</strong> One token-based wallet for all transactions.</p>
-        </li>
+  <li class="flex items-start gap-3">
+    <span class="bg-green-100 text-green-600 p-2 rounded-xl">
+      <i class="ri-wallet-3-fill text-xl"></i>
+    </span>
+    <p><strong>Unified Wallet:</strong> One token-based wallet for all transactions.</p>
+  </li>
 
-        <li class="flex items-start gap-3">
-          <span class="text-green-600 text-xl font-bold">•</span>
-          <p><strong>Lower Costs:</strong> Reduced transaction charges and fewer failures.</p>
-        </li>
+  <li class="flex items-start gap-3">
+    <span class="bg-green-100 text-green-600 p-2 rounded-xl">
+      <i class="ri-money-dollar-circle-fill text-xl"></i>
+    </span>
+    <p><strong>Lower Costs:</strong> Reduced transaction charges and fewer failures.</p>
+  </li>
 
-        <li class="flex items-start gap-3">
-          <span class="text-green-600 text-xl font-bold">•</span>
-          <p><strong>Full Transparency:</strong> Track every payment in real time.</p>
-        </li>
+  <li class="flex items-start gap-3">
+    <span class="bg-green-100 text-green-600 p-2 rounded-xl">
+      <i class="ri-eye-fill text-xl"></i>
+    </span>
+    <p><strong>Full Transparency:</strong> Track every payment in real time.</p>
+  </li>
 
-        <li class="flex items-start gap-3">
-          <span class="text-green-600 text-xl font-bold">•</span>
-          <p><strong>Trusted Ecosystem:</strong> Builds confidence between farmers, buyers & processors.</p>
-        </li>
+  <li class="flex items-start gap-3">
+    <span class="bg-green-100 text-green-600 p-2 rounded-xl">
+      <i class="ri-shield-check-fill text-xl"></i>
+    </span>
+    <p><strong>Trusted Ecosystem:</strong> Builds confidence between farmers, buyers & processors.</p>
+  </li>
 
-      </ul>
+</ul>
 
     </div>
 
@@ -389,10 +451,117 @@
       </div>
 
     </div>
+  </div>
+</section>
+
+ <!-- Target Users ends -->
+
+ <section class="w-full py-16 bg-white">
+  <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1 relative w-full min-h-[350px] h-[60vh] md:h-[70vh] overflow-hidden rounded-2xl">
+
+  <!-- SLIDE 1 -->
+  <div class="slide bg-cover bg-center absolute inset-0 opacity-0 transition-opacity duration-1000"
+       style="background-image: url('./img/Fa&son.jpg')">
+    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center px-6">
+
+      <!-- BRAND -->
+      <h2 class="text-4xl font-bold mb-2 text-white text-center">
+        Agreon<span class="text-green-600 border-b-4 border-white pb-1">Pay</span>
+      </h2>
+
+      <!-- "Is the solution" section -->
+      <div class="flex items-center gap-2 text-white mb-4">
+        <i class="ri-checkbox-circle-fill text-green-500 text-2xl"></i>
+        <span class="text-xl font-semibold">is the solution</span>
+      </div>
+
+      <!-- SLIDE TEXT -->
+      <p class="text-white  font-bold text-center">
+        Agriculture deserves a seamless financial ecosystem.
+      </p>
+
+    </div>
+  </div>
+
+  <!-- SLIDE 2 -->
+  <div class="slide bg-cover bg-center absolute inset-0 opacity-0 transition-opacity duration-1000"
+       style="background-image: url('./img/woman-with-card.jpg')">
+    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center px-6">
+
+      <h2 class="text-4xl font-bold mb-2 text-white text-center">
+        Agreon<span class="text-green-600 border-b-4 border-white pb-1">Pay</span>
+      </h2>
+
+      <div class="flex items-center gap-2 text-white mb-4">
+        <i class="ri-checkbox-circle-fill text-green-500 text-2xl"></i>
+        <span class="text-xl font-semibold">is the solution</span>
+      </div>
+
+      <p class="text-white  font-bold text-center">
+        Farmers shouldn’t lose money because payments are slow.
+      </p>
+
+    </div>
+  </div>
+
+  <!-- SLIDE 3 -->
+  <div class="slide bg-cover bg-center absolute inset-0 opacity-0 transition-opacity duration-1000"
+       style="background-image: url('./img/handcard.jpg')">
+    <div class="absolute inset-0 bg-black/40 flex flex-col items-center justify-center px-6">
+
+      <h2 class="text-4xl font-bold mb-2 text-white text-center">
+        Agreon<span class="text-green-600 border-b-4 border-white pb-1">Pay</span>
+      </h2>
+
+      <div class="flex items-center gap-2 text-white mb-4">
+        <i class="ri-checkbox-circle-fill text-green-500 text-2xl"></i>
+        <span class="text-xl font-semibold">is the solution</span>
+      </div>
+
+      <p class="text-white  font-bold text-center">
+        One trusted wallet for Africa’s agricultural economy.
+      </p>
+
+    </div>
+  </div>
+
+</div>
+
+
+    <!-- RIGHT SIDE CONTENT -->
+    <div class="flex-1">
+      
+      <h2 class="text-4xl font-bold text-gray-900 mb-4">
+        Experience the Future of Agricultural Payments
+      </h2>
+
+      <p class="text-gray-700 mb-6">
+        AgreonPay connects farmers, buyers, and processors in one trusted ecosystem — 
+        making every transaction faster, safer, and more reliable.
+      </p>
+
+      <!-- App Buttons -->
+      <div class="flex items-center gap-4 mt-4">
+
+        <a href="#">
+          <img src="./img/applstore.png" class="h-14" alt="Download on App Store">
+        </a>
+
+        <a href="#">
+          <img src="./img/googplay.png" class="h-14" alt="Get it on Google Play">
+        </a>
+
+      </div>
+    </div>
 
   </div>
 </section>
- <!-- Target Users ends -->
+
+<!-- SLIDER  -->
+
+
+
 
  <!-- social proofs -->
   <section class="py-24 bg-white">

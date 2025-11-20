@@ -13,49 +13,105 @@
     />
 </head>
 <body>
-    <!-- SIDEBAR -->
-    <div id="sidebar" class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg p-6 transform -translate-x-full transition-all duration-300 z-50">
-  <a href="#" class="flex items-center">
-  <img src="img/agreonlogo.png" alt="AgreonPay Logo" class="md:h-8 h-4 w-auto mb-4">
-</a>
-    <ul class="space-y-6 text-lg">
-        <li><a href="index.html" class="hover:text-green-600">Home</a></li>
-        <li><a href="#" class="text-green-600">Features</a></li>
-        <li><a href="pricing.html" class="hover:text-green-600">Pricing</a></li>
-        <li><a href="contact.html" class="hover:text-green-600">Contact</a></li>
+ 
+
+  <!-- SIDEBAR -->
+  <div id="sidebar" class="fixed top-0 left-0 w-64 h-full bg-white shadow-lg p-6 transform -translate-x-full transition-all duration-300 z-50 overflow-y-auto">
+    <a href="#" class="flex items-center mb-6">
+      <img src="img/agreonlogo.png" alt="AgreonPay Logo" class="md:h-8 h-6 w-auto">
+    </a>
+
+    <ul class="space-y-4 text-lg">
+      <li><a href="#" class="text-green-600">Home</a></li>
+
+      <!-- Features Dropdown -->
+      <li>
+        <div class="flex justify-between items-center w-full">
+          <a href="#" class="hover:text-green-600">Features</a>
+          <i class="ri-arrow-down-s-line cursor-pointer sidebar-dropdown-icon"></i>
+        </div>
+        <ul class="ml-4 mt-2 hidden space-y-2 text-gray-700 sidebar-dropdown-menu">
+          <li><a href="#">Feature 1</a></li>
+          <li><a href="#">Feature 2</a></li>
+          <li><a href="#">Feature 3</a></li>
+        </ul>
+      </li>
+
+      <!-- Pricing Dropdown -->
+      <li>
+        <div class="flex justify-between items-center w-full">
+          <a href="#" class="hover:text-green-600">Pricing</a>
+          <i class="ri-arrow-down-s-line cursor-pointer sidebar-dropdown-icon"></i>
+        </div>
+        <ul class="ml-4 mt-2 hidden space-y-2 text-gray-700 sidebar-dropdown-menu">
+          <li><a href="#">Basic</a></li>
+          <li><a href="#">Standard</a></li>
+          <li><a href="#">Premium</a></li>
+        </ul>
+      </li>
+
+      <li><a href="contact.html" class="hover:text-green-600">Contact</a></li>
     </ul>
+
+    <!-- App Buttons -->
+    <div class="mt-8 flex gap-4">
+      <a href="#">
+        <img src="./img/applstore.png" class="h-8 w-auto" alt="Download on App Store">
+      </a>
+      <a href="#">
+        <img src="./img/googplay.png" class="h-8 w-auto" alt="Get it on Google Play">
+      </a>
     </div>
+  </div>
 
-    <!-- BACKDROP -->
-    <div id="backdrop" class="fixed inset-0 bg-black/40 hidden z-40"></div>
+  <!-- BACKDROP -->
+  <div id="backdrop" class="fixed inset-0 bg-black/40 hidden z-40"></div>
 
-    <!-- NAVBAR -->
-    <nav class="w-full bg-white fixed top-0 left-0 z-40 shadow-sm px-6 py-4 flex justify-between items-center">
+  <!-- NAVBAR -->
+  <nav class="w-full bg-white fixed top-0 left-0 z-40 shadow-sm px-6 py-4 flex justify-between items-center">
     <a href="#" class="flex items-center">
-      <img src="img/agreonlogo.png" alt="AgreonPay Logo" class="md:h-8 h-4 w-auto">
+      <img src="img/agreonlogo.png" alt="AgreonPay Logo" class="md:h-8 h-6 w-auto">
     </a>
 
     <!-- Desktop Menu -->
-    <ul class="hidden md:flex gap-8 text-lg text-gray-700 font-medium">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#" class="text-green-600">Features</a></li>
-        <li><a href="pricing.html">Pricing</a></li>
-        <li><a href="contact.html">Contact</a></li>
+    <ul class="hidden md:flex gap-8 text-gray-700 text-lg font-medium mr-8">
+      <li><a href="index.html" class="text-green-600">Home</a></li>
+
+      <!-- Features Dropdown -->
+      <li class="relative">
+        <a href="#" class="hover:text-green-600 flex items-center gap-1">
+          Features
+          <i class="ri-arrow-down-s-line ml-1 cursor-pointer" id="featuresDropdownIcon"></i>
+        </a>
+        <ul class="absolute left-0 mt-2 bg-white shadow-lg rounded-md p-4 hidden space-y-2 text-gray-700 min-w-[150px]" id="featuresDropdownMenu">
+          <li><a href="features.html" class="hover:text-green-600">Feature 1</a></li>
+          <li><a href="features.html" class="hover:text-green-600">Feature 2</a></li>
+          <li><a href="features.html" class="hover:text-green-600">Feature 3</a></li>
+        </ul>
+      </li>
+
+      <!-- Pricing Dropdown -->
+      <li class="relative">
+        <a href="#" class="hover:text-green-600 flex items-center gap-1">
+          Pricing
+          <i class="ri-arrow-down-s-line ml-1 cursor-pointer" id="pricingDropdownIcon"></i>
+        </a>
+        <ul class="absolute left-0 mt-2 bg-white shadow-lg rounded-md p-4 hidden space-y-2 text-gray-700 min-w-[150px]" id="pricingDropdownMenu">
+          <li><a href="pricing.html" class="hover:text-green-600">Basic</a></li>
+          <li><a href="pricing.html" class="hover:text-green-600">Standard</a></li>
+          <li><a href="pricing.html" class="hover:text-green-600">Premium</a></li>
+        </ul>
+      </li>
+
+      <li><a href="contact.html" class="hover:text-green-600">Contact</a></li>
     </ul>
 
     <!-- MOBILE BUTTONS -->
-    <div class="md:hidden">
-        <!-- MENU ICON -->
-        <button id="menuBtn" class="text-3xl">
-        ☰
-        </button>
-
-        <!-- CLOSE ICON -->
-        <button id="closeBtn" class="text-3xl hidden">
-        ✕
-        </button>
+    <div class="md:hidden flex items-center gap-2">
+      <button id="menuBtn" class="text-3xl">☰</button>
+      <button id="closeBtn" class="text-3xl hidden">✕</button>
     </div>
-    </nav>
+  </nav>
 
     <!-- FEATURES HERO SECTION -->
     <section class="pt-36 pb-8 bg-green-50  text-center animate-fadeUp">

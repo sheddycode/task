@@ -84,3 +84,74 @@
   });
 
   counters.forEach(counter => observer.observe(counter));
+
+  // Images Slides Script 
+   const slides = document.querySelectorAll('.slide');
+  let index = 0;
+
+  function showSlide() {
+    slides.forEach((slide, i) => {
+      slide.style.opacity = i === index ? '1' : '0';
+    });
+
+    index = (index + 1) % slides.length;
+  }
+
+  showSlide();
+  setInterval(showSlide, 4000); // changes every 4 seconds
+
+  // scripts for dropdown menu icon
+  // === DESKTOP DROPDOWNS ===
+const featuresIcon = document.getElementById('featuresDropdownIcon');
+const featuresMenu = document.getElementById('featuresDropdownMenu');
+
+const pricingIcon = document.getElementById('pricingDropdownIcon');
+const pricingMenu = document.getElementById('pricingDropdownMenu');
+
+featuresIcon.addEventListener('click', (e) => {
+  e.stopPropagation(); // prevent closing immediately
+  featuresMenu.classList.toggle('hidden');
+  featuresIcon.classList.toggle('ri-arrow-up-s-line');
+  featuresIcon.classList.toggle('ri-arrow-down-s-line');
+});
+
+pricingIcon.addEventListener('click', (e) => {
+  e.stopPropagation();
+  pricingMenu.classList.toggle('hidden');
+  pricingIcon.classList.toggle('ri-arrow-up-s-line');
+  pricingIcon.classList.toggle('ri-arrow-down-s-line');
+});
+
+// Close desktop dropdowns if clicked outside
+document.addEventListener('click', () => {
+  featuresMenu.classList.add('hidden');
+  featuresIcon.classList.remove('ri-arrow-up-s-line');
+  featuresIcon.classList.add('ri-arrow-down-s-line');
+
+  pricingMenu.classList.add('hidden');
+  pricingIcon.classList.remove('ri-arrow-up-s-line');
+  pricingIcon.classList.add('ri-arrow-down-s-line');
+});
+
+
+// === SIDEBAR DROPDOWNS ===
+const sidebarIcons = document.querySelectorAll('.sidebar-dropdown-icon');
+
+sidebarIcons.forEach(icon => {
+  icon.addEventListener('click', (e) => {
+    e.stopPropagation(); // prevent closing when clicking icon
+    const menu = icon.closest('li').querySelector('.sidebar-dropdown-menu');
+    menu.classList.toggle('hidden');
+    icon.classList.toggle('ri-arrow-up-s-line');
+    icon.classList.toggle('ri-arrow-down-s-line');
+  });
+});
+
+// Close sidebar dropdowns if clicked outside
+document.addEventListener('click', () => {
+  document.querySelectorAll('.sidebar-dropdown-menu').forEach(menu => menu.classList.add('hidden'));
+  document.querySelectorAll('.sidebar-dropdown-icon').forEach(icon => {
+    icon.classList.remove('ri-arrow-up-s-line');
+    icon.classList.add('ri-arrow-down-s-line');
+  });
+});
