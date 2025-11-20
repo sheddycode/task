@@ -47,13 +47,14 @@
   backdrop.addEventListener("click", closeSidebar);
 
   // Function for Number counts
-    const counters = document.querySelectorAll('.count-up');
+   const counters = document.querySelectorAll('.count-up');
   let counted = false;
 
   const startCounting = () => {
     counters.forEach(counter => {
       const target = +counter.getAttribute('data-target');
       const speed = 200;
+
       const step = () => {
         const count = +counter.innerText;
         const increment = target / speed;
@@ -65,10 +66,12 @@
           counter.innerText = target;
         }
       };
+
       step();
     });
   };
 
+  // Trigger immediately when the counters *touch* the viewport
   const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
       if (entry.isIntersecting && !counted) {
@@ -76,6 +79,8 @@
         startCounting();
       }
     });
-  }, { threshold: 0.3 });
+  }, {
+    threshold: 0   // fires instantly when element enters the viewport
+  });
 
   counters.forEach(counter => observer.observe(counter));
