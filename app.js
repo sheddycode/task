@@ -45,3 +45,37 @@
   menuBtn.addEventListener("click", openSidebar);
   closeBtn.addEventListener("click", closeSidebar);
   backdrop.addEventListener("click", closeSidebar);
+
+  // Function for Number counts
+    const counters = document.querySelectorAll('.count-up');
+  let counted = false;
+
+  const startCounting = () => {
+    counters.forEach(counter => {
+      const target = +counter.getAttribute('data-target');
+      const speed = 200;
+      const step = () => {
+        const count = +counter.innerText;
+        const increment = target / speed;
+
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          requestAnimationFrame(step);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      step();
+    });
+  };
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !counted) {
+        counted = true;
+        startCounting();
+      }
+    });
+  }, { threshold: 0.3 });
+
+  counters.forEach(counter => observer.observe(counter));
