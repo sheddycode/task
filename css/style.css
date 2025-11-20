@@ -1,3 +1,5 @@
+/* ROBOTO FONT */
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&display=swap');
 
 @keyframes fadeUp {
   0% {
@@ -22,3 +24,6 @@
 .delay-700 { animation-delay: 0.7s; }
 .delay-900 { animation-delay: 0.9s; }
 
+*{
+  font-family: "Roboto Slab", poppins;
+}
